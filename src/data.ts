@@ -25,7 +25,7 @@ export const storeData: StoreData = {
   typography: {
     displayFontFamily: 'Lilita One',
     bodyFontFamily: 'Poppins',
-    importUrl: 'https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;400;500;600;700&display=swap',
+    importUrl: 'https://fonts.googleapis.com/css2?family=Lilita+One&family=Poppins:wght@300;450;600;800&display=swap',
   },
   features: [
     {
@@ -46,30 +46,42 @@ export const storeData: StoreData = {
   ],
   products: [
     {
-      id: 'prod-1',
+      id: 'burger-1',
       name: 'Pitts Salada Clássico',
-      description: 'Blend bovino de 120g grelhado, queijo derretido, alface fresca, tomate, cebola roxa e o clássico molho Pitts no pão com gergelim.',
+      description: 'Blend de carne bovina fresca de 150g grelhada no fogo, queijo prato derretido, alface crespa, tomate fresco, cebola roxa e o lendário molho secreto Pitts no pão com gergelim.',
       price: 'R$ 24,90',
       iconName: 'Utensils',
       imageUrl: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=600',
+      category: 'burgers',
+      tag: 'O Mais Querido'
     },
     {
-      id: 'prod-2',
-      name: 'Super Pitts Especial',
-      description: 'Dois blends suculentos de 120g, fatias de bacon crocante, ovo na chapa, queijo cheddar duplo e maionese artesanal no pão brioche.',
-      price: 'R$ 36,90',
-      iconName: 'Utensils',
+      id: 'burger-2',
+      name: 'Duplo Cheddar & Bacon',
+      description: 'Dois blends suculentos de 120g grelhados, queijo cheddar cremoso duplo maçaricado, fatias de bacon defumado crocante e maionese defumada artesanal no pão brioche.',
+      price: 'R$ 38,90',
+      iconName: 'Flame',
       imageUrl: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&q=80&w=600',
+      category: 'burgers',
+      tag: 'Campeão de Vendas'
     },
     {
-      id: 'prod-3',
-      name: 'Batata Frita Pitts & Milkshake',
-      description: 'Nossas clássicas batatas fritas onduladas super crocantes acompanhadas por um generoso milkshake de 500ml sabor Ovomaltine.',
-      price: 'R$ 19,90',
+      id: 'burger-3',
+      name: 'Combo Batata Frita & Milkshake',
+      description: 'Nossa famosa porção grande de batata frita ondulada e crocante acompanhada por um milkshake cremoso de 500ml sabor Ovomaltine Crocante.',
+      price: 'R$ 29,90',
       iconName: 'Pizza',
       imageUrl: 'https://images.unsplash.com/photo-1576107232684-1279f390859f?auto=format&fit=crop&q=80&w=600',
-    },
+      category: 'combos',
+      tag: 'Clássico Pitts'
+    }
   ],
-  instagramUrl: 'https://instagram.com',
-  facebookUrl: 'https://facebook.com',
+  instagramUrl: 'https://www.instagram.com',
+  facebookUrl: 'https://www.facebook.com',
+  brands: [
+    { name: 'Blend Angus', desc: 'Carne fresca 100% certificada' },
+    { name: 'Cheddar Inglês', desc: 'Queijo importado legítimo' },
+    { name: 'Heinz Brasil', desc: 'Condimentos de alta qualidade' },
+    { name: 'Panificadora Natal', desc: 'Pão brioche assado diariamente' }
+  ]
 };
