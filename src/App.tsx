@@ -151,7 +151,7 @@ export default function App() {
       </div>
 
       {/* HEADER */}
-      <header className={`fixed top-0 sm:top-18 left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'bg-[#0F0F0F] shadow-lg py-2 border-b border-red-500/25' : 'bg-transparent py-4'}`}>
+      <header className={`fixed left-0 right-0 z-40 transition-all duration-300 ${scrolled ? 'top-0 bg-[#0F0F0F] shadow-lg py-2 border-b border-red-500/25' : 'top-0 sm:top-18 bg-transparent py-4'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-4">
             <a href="#hero" className="flex items-center transition-transform hover:scale-101 shrink-0">
