@@ -6,6 +6,7 @@ export const storeData: StoreData = {
   description: 'Desde 1984 servindo o burger mais querido da cidade. Ingredientes frescos, molho especial e o sabor inconfundível que você só encontra na nossa matriz em Lagoa Nova.',
   aboutText: 'O Pitts Burger é um ícone da gastronomia potiguar. Nascido em Natal, conquistamos gerações com a filosofia de fazer hambúrgueres de verdade: carne grelhada de forma perfeita, vegetais colhidos no dia e o lendário molho especial que é o segredo do nosso sucesso. Nossa matriz na Prudente de Morais é o ponto de encontro preferido das famílias de Lagoa Nova.',
   aboutImage: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&q=80&w=1200',
+  logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6sF0x8xT2_sFmKz31hQOecjP91aBdfw4K6A&s',
   phone: '(84) 4008-4000',
   phoneFormatted: '8440084000',
   whatsappNumber: '558440084000',

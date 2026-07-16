@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { storeData } from './data';
 import { Icon } from './components/Icon';
 
-// Componente de Logotipo Vetorial Personalizado (Hambúrguer retrô estilizado com chamas de grelha e anel clássico neon)
+// Componente de Logotipo (Logo oficial por imagem ou Hambúrguer retrô estilizado SVG como fallback)
 function Logo({ className = "h-10", dark = false }: { className?: string; dark?: boolean }) {
   const primaryColor = '#dc2626'; // Vermelho Pitts
   const accentColor = '#fbbf24';  // Amarelo Mostarda
@@ -10,16 +10,18 @@ function Logo({ className = "h-10", dark = false }: { className?: string; dark?:
 
   return (
     <div className={`flex items-center space-x-2.5 ${className}`}>
-      <svg className="h-full aspect-square overflow-visible" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g stroke={primaryColor} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
-          {/* Hambúrguer - pão superior, carne, pão inferior */}
-          <path d="M 40 90 Q 100 40 160 90 Z" fill={accentColor} strokeWidth="12" />
-          <path d="M 30 110 L 170 110" stroke={primaryColor} strokeWidth="18" />
-          <path d="M 50 130 C 50 150 150 150 150 130 Z" fill={accentColor} strokeWidth="12" />
-          {/* Chamas na grelha sob o burger */}
-          <path d="M 60 170 Q 70 150 80 170 Q 90 150 100 170 Q 110 150 120 170" stroke={primaryColor} strokeWidth="8" />
-        </g>
-      </svg>
+      {storeData.logoUrl ? (
+        <img src={storeData.logoUrl} alt={storeData.name} className="h-8 w-auto object-contain rounded-md border border-red-500/10" />
+      ) : (
+        <svg className="h-full aspect-square overflow-visible" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g stroke={primaryColor} strokeWidth="12" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M 40 90 Q 100 40 160 90 Z" fill={accentColor} strokeWidth="12" />
+            <path d="M 30 110 L 170 110" stroke={primaryColor} strokeWidth="18" />
+            <path d="M 50 130 C 50 150 150 150 150 130 Z" fill={accentColor} strokeWidth="12" />
+            <path d="M 60 170 Q 70 150 80 170 Q 90 150 100 170 Q 110 150 120 170" stroke={primaryColor} strokeWidth="8" />
+          </g>
+        </svg>
+      )}
       <div className="flex flex-col leading-[0.9] text-left font-display">
         <span className="text-2xl font-black tracking-tighter uppercase" style={{ color: textColor }}>PITTS</span>
         <span className="text-[15px] font-black tracking-[0.2em]" style={{ color: accentColor }}>BURGER</span>
